@@ -1,11 +1,14 @@
 package WePayU.timeCard;
 
+
+
 public class TimeCard {
-    String date, start, end;
 
+    private String start, end;
 
-    public String getDate() {
-        return date;
+    public TimeCard(String start, String end){
+        this.start = start;
+        this.end = end;
     }
 
     public String getStart() {
@@ -16,10 +19,6 @@ public class TimeCard {
         return end;
     }
 
-    public void setDate(String date) {
-        this.date = date;
-    }
-
     public void setStart(String start) {
         this.start = start;
     }
@@ -27,4 +26,5 @@ public class TimeCard {
     public void setEnd(String end) {
         this.end = end;
     }
+
 }

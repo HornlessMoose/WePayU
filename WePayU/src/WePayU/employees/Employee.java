@@ -1,18 +1,21 @@
 package WePayU.employees;
 
-/**
- * Created by alunoic on 24/08/18.
- */
-public class Employee {
-    String name, address, paymentMethod;
-    int ID;
 
-    public Employee(String name, String address, int ID, String paymenteMethod){
+import java.text.ParseException;
+
+
+public class Employee {
+    private String name, address, paymentMethod, paymentSchedule;
+    private int ID;
+
+
+    public Employee(String name, String address, int ID, String paymentMethod){
         this.name = name;
         this.address = address;
         this.ID = ID;
-        this.paymentMethod = paymenteMethod;
+        this.paymentMethod = paymentMethod;
     }
+
 
     public String getName() {
         return name;
@@ -42,9 +45,21 @@ public class Employee {
         this.paymentMethod = paymentMethod;
     }
 
+    public void setPaymentSchedule(String paymentSchedule) {
+        this.paymentSchedule = paymentSchedule;
+    }
+
+    public String getPaymentSchedule() {
+        return paymentSchedule;
+    }
+
     @Override
     public String toString() {
-        return "\nNome: " + getName() + "\nEndereço: "+ getAddress()
+        return  "\nID: " + getID() + "\nNome: " + getName() + "\nEndereço: "+ getAddress()
                 + "\nMetodo de pagamento: " + getPaymentMethod();
+    }
+
+    public float calculateSalary() throws ParseException {
+        return 0;
     }
 }

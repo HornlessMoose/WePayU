@@ -1,8 +1,13 @@
 package WePayU.saleResult;
 
 public class SaleResult {
-    String saleDate;
-    float value;
+    private String saleDate;
+    private float value;
+
+    public SaleResult(String saleDate, float value){
+        this.saleDate = saleDate;
+        this.value = value;
+    }
 
     public String getSaleDate() {
         return saleDate;

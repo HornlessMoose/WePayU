@@ -1,7 +1,7 @@
 package WePayU.employees;
 
 public class Salaried extends Employee{
-    float salary;
+    private float salary;
 
     public Salaried(String name, String address, int ID,String paymentMethod, float salary) {
         super(name, address, ID, paymentMethod);
@@ -10,5 +10,9 @@ public class Salaried extends Employee{
 
     public float getSalary() {
         return salary;
+    }
+
+    public float calculateSalary(){
+       return salary;
     }
 }

@@ -1,22 +1,21 @@
 package WePayU.syndicate;
 
-public class Syndicate {
-    float monthlyFee, additionalFee;
-    int employeeID, syndidateID;
+import java.util.ArrayList;
 
-    public Syndicate(float monthlyFee, float additionalFee, int employeeID, int syndidateID){
+public class Syndicate {
+    private float monthlyFee;
+    private int employeeID, syndicateID;
+
+    private ArrayList<SyndicateAdditionalFee> syndicateAdditionalFees = new ArrayList<>();
+
+    public Syndicate(float monthlyFee, int employeeID, int syndicateID){
         this.monthlyFee = monthlyFee;
-        this.additionalFee = additionalFee;
         this.employeeID = employeeID;
-        this.syndidateID = syndidateID;
+        this.syndicateID = syndicateID;
     }
 
     public float getMonthlyFee() {
         return monthlyFee;
-    }
-
-    public float getAdditionalFee() {
-        return additionalFee;
     }
 
     public int getEmployeeID() {
@@ -24,15 +23,11 @@ public class Syndicate {
     }
 
     public int getSyndidateID() {
-        return syndidateID;
+        return syndicateID;
     }
 
     public void setMonthlyFee(float monthlyFee) {
         this.monthlyFee = monthlyFee;
-    }
-
-    public void setAdditionalFee(float additionalFee) {
-        this.additionalFee += additionalFee;
     }
 
     public void setEmployeeID(int employeeID) {
@@ -41,6 +36,10 @@ public class Syndicate {
     }
 
     public void setSyndidateID(int syndidateID) {
-        this.syndidateID = syndidateID;
+        this.syndicateID = syndidateID;
+    }
+
+    public ArrayList<SyndicateAdditionalFee> getSyndicateAdditionalFees() {
+        return syndicateAdditionalFees;
     }
 }
